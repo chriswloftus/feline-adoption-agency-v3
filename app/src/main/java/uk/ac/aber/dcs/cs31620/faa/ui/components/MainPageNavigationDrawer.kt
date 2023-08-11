@@ -18,7 +18,7 @@ import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -71,7 +71,7 @@ fun MainPageNavigationDrawer(
             // Not sure if rememberSaveable or remember is what we
             // want since it stays selected when we close and
             // reopen the drawer. However...
-            val selectedItem = rememberSaveable { mutableStateOf(0) }
+            val selectedItem = rememberSaveable { mutableIntStateOf(0) }
             ModalDrawerSheet {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
